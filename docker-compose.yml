@@ -2,17 +2,7 @@ version: '2'
 
 services:
     upsource:
-        image: modpreneur/upsource
+        image: esycat/upsource
         container_name: upsource
-        restart: always
         ports:
             - 8081:8080
-        volumes:
-            - /etc/localtime:/etc/localtime:ro
-            - /etc/timezone:/etc/timezone:ro
-            - /data/upsource:/var/lib/upsource
-            - /data/upsource/conf:/opt/upsource/conf
-        ulimits:
-            memlock: -1
-            nofile: 100000
-            nproc: 32768

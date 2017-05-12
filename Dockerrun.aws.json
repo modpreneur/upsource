@@ -1,0 +1,46 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "data",
+      "host": {
+        "sourcePath": "/data/upsource/data"
+      }
+    },
+    {
+      "name": "backup",
+      "host": {
+        "sourcePath": "/data/upsource/backup"
+      }
+    }
+  ],
+  "containerDefinitions": [
+
+    {
+      "name": "upsource",
+      "image": "esycat/upsource",
+      "essential": true,
+      "memoryReservation": 768,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "data",
+          "containerPath": "/var/lib/upsource"
+        },
+        {
+          "sourceVolume": "awseb-logs-upsource",
+          "containerPath": "/var/lib/upsource/log/"
+        },
+        {
+          "sourceVolume": "backup",
+          "containerPath": "/var/lib/upsource"
+        }
+      ]
+    }
+  ]
+}
