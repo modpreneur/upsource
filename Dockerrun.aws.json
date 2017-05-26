@@ -11,10 +11,6 @@
   ],
   "Volumes": [
     {
-      "HostDirectory": "/var/app/data",
-      "ContainerDirectory": "/var/lib/upsource"
-    },
-    {
       "HostDirectory": "/var/app/conf",
       "ContainerDirectory": "/opt/upsource/conf"
     }
