@@ -1,46 +1,20 @@
 {
-  "AWSEBDockerrunVersion": 1,
-  "volumes": [
+  "AWSEBDockerrunVersion": "1",
+  "Image": "esycat/upsource",
+  "Ports": [
     {
-      "name": "data",
-      "host": {
-        "sourcePath": "/data/upsource/data"
-      }
-    },
-    {
-      "name": "backup",
-      "host": {
-        "sourcePath": "/data/upsource/backup"
-      }
+      "ContainerPort": "8080"
     }
   ],
-  "containerDefinitions": [
-
+  "Volumes": [
     {
-      "name": "upsource",
-      "image": "esycat/upsource",
-      "essential": true,
-      "memoryReservation": 768,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "containerPort": 8080
-        }
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "data",
-          "containerPath": "/var/lib/upsource"
-        },
-        {
-          "sourceVolume": "awseb-logs-upsource",
-          "containerPath": "/var/lib/upsource/log/"
-        },
-        {
-          "sourceVolume": "backup",
-          "containerPath": "/var/lib/upsource"
-        }
-      ]
+      "HostDirectory": "/var/app/data",
+      "ContainerDirectory": "/var/lib/upsource/data/"
+    },
+    {
+      "HostDirectory": "/var/app/backup",
+      "ContainerDirectory": "/var/lib/upsource/backup/"
     }
-  ]
+  ],
+  "Logging": "/var/lib/upsource/log/"
 }
