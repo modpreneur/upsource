@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "jetbrains/upsource",
+    "Name": "jetbrains/upsource:2017.1.1922",
     "Update": "true"
   },
   "Ports": [
