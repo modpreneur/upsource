@@ -3,7 +3,7 @@
   "Image": {
     "Name": "esycat/upsource",
     "Update": "true"
-  }
+  },
   "Ports": [
     {
       "ContainerPort": "8080"
