@@ -15,8 +15,8 @@
       "ContainerDirectory": "/var/lib/upsource/data/"
     },
     {
-      "HostDirectory": "/var/app/backup",
-      "ContainerDirectory": "/var/lib/upsource/backup/"
+      "HostDirectory": "/var/app/backups",
+      "ContainerDirectory": "/var/lib/upsource/backups/"
     }
   ],
   "Logging": "/var/lib/upsource/log/"
