@@ -13,14 +13,6 @@
     {
       "HostDirectory": "/data/upsource/data",
       "ContainerDirectory": "/opt/upsource/data"
-    },
-    {
-      "HostDirectory": "/data/upsource/conf",
-      "ContainerDirectory": "/opt/upsource/conf"
-    },
-    {
-      "HostDirectory": "/data/upsource/backups",
-      "ContainerDirectory": "/opt/upsource/backups"
     }
   ],
   "Logging": "/var/lib/upsource/log/"
