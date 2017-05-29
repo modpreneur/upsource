@@ -9,5 +9,15 @@
       "ContainerPort": "8080"
     }
   ],
+  "Volumes": [
+    {
+      "HostDirectory": "/data/data",
+      "ContainerDirectory": "/opt/upsource/data"
+    },
+    {
+      "HostDirectory": "/data/backups",
+      "ContainerDirectory": "/opt/upsource/backups"
+    }
+  ],
   "Logging": "/var/lib/upsource/log/"
 }
