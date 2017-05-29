@@ -11,8 +11,8 @@
   ],
   "Volumes": [
     {
-      "HostDirectory": "/data/upsource/data",
-      "ContainerDirectory": "/opt/upsource/data"
+      "HostDirectory": "/data/upsource/backups",
+      "ContainerDirectory": "/opt/upsource/backups"
     }
   ],
   "Logging": "/var/lib/upsource/log/"
