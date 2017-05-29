@@ -11,15 +11,15 @@
   ],
   "Volumes": [
     {
-      "HostDirectory": "/var/app/var/data",
+      "HostDirectory": "/data/data",
       "ContainerDirectory": "/opt/upsource/data"
     },
     {
-      "HostDirectory": "/var/app/var/conf",
+      "HostDirectory": "/data/conf",
       "ContainerDirectory": "/opt/upsource/conf"
     },
     {
-      "HostDirectory": "/var/app/var/backups",
+      "HostDirectory": "/data/backups",
       "ContainerDirectory": "/opt/upsource/backups"
     }
   ],
