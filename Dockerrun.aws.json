@@ -11,7 +11,7 @@
   ],
   "Volumes": [
     {
-      "HostDirectory": "/data/upsource/test",
+      "HostDirectory": "/dev/xvda1/upsource/test",
       "ContainerDirectory": "/opt/upsource/test"
     }
   ],
